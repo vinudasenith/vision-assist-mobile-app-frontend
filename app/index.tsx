@@ -29,6 +29,13 @@ export default function Home() {
             >
                 <Text className="text-white">Go to Splash Screen</Text>
             </TouchableOpacity>
+
+            <TouchableOpacity
+                onPress={() => router.push('/support')}
+                className="bg-blue-600 px-6 py-3 rounded-lg"
+            >
+                <Text className="text-white">Go to Support Page</Text>
+            </TouchableOpacity>
         </View>
     );
 }
