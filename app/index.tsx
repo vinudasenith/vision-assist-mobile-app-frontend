@@ -15,6 +15,13 @@ export default function Home() {
             >
                 <Text className="text-white">Go to Login</Text>
             </TouchableOpacity>
+
+            <TouchableOpacity
+                onPress={() => router.push('/register')}
+                className="bg-blue-600 px-6 py-3 rounded-lg"
+            >
+                <Text className="text-white">Go to Sign Up</Text>
+            </TouchableOpacity>
         </View>
     );
 }
