@@ -1,10 +1,21 @@
+import { useRouter } from 'expo-router';
 import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 
 export default function AboutUsScreen() {
+    const router = useRouter();
     return (
         <View className="flex-1 bg-blue-500">
 
             {/* Header Section */}
+
+            <TouchableOpacity
+                onPress={() => router.back()}
+                className="absolute left-6 top-16 w-12 h-12 bg-white rounded-full items-center justify-center shadow z-50"
+                activeOpacity={0.7}
+            >
+                <Text className="text-blue-500 text-2xl font-bold">←</Text>
+            </TouchableOpacity>
+
             <View className="items-center pt-16 pb-8">
                 <Text className="text-white text-4xl font-bold">
                     Vision<Text className="text-gray-800">Assist</Text>
@@ -63,31 +74,7 @@ export default function AboutUsScreen() {
                         </Text>
                     </TouchableOpacity>
                 </View>
-
-                {/* Connection Status */}
-                <View className="items-center mb-5">
-                    <Text className="text-black font-bold text-sm mb-1">
-                        CONNECTED TO
-                    </Text>
-                    <Text className="text-blue-500 font-bold text-xl">
-                        #VAH-1023
-                    </Text>
-                </View>
-
-                {/* Logout Button */}
-                <TouchableOpacity className="bg-blue-500 rounded-full py-4 mb-6 w-3/4 self-center">
-                    <Text className="text-white text-center font-bold text-lg">
-                        LOGOUT
-                    </Text>
-                </TouchableOpacity>
-
             </ScrollView>
-
-            {/* Back Button */}
-            <TouchableOpacity className="absolute bottom-6 left-6">
-                <Text className="text-blue-500 text-4xl">←</Text>
-            </TouchableOpacity>
-
         </View>
     );
 }
