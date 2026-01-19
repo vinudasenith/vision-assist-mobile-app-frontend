@@ -1,10 +1,21 @@
+import { useRouter } from 'expo-router';
 import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 
 export default function HelpSupportScreen() {
+    const router = useRouter();
     return (
         <View className="flex-1 bg-blue-500">
 
             {/* Header Section */}
+
+            <TouchableOpacity
+                onPress={() => router.back()}
+                className="absolute left-6 top-16 w-12 h-12 bg-white rounded-full items-center justify-center shadow z-50"
+                activeOpacity={0.7}
+            >
+                <Text className="text-blue-500 text-2xl font-bold">←</Text>
+            </TouchableOpacity>
+
             <View className="items-center pt-16 pb-8">
                 <Text className="text-white text-4xl font-bold">
                     Vision<Text className="text-gray-800">Assist</Text>
@@ -78,10 +89,6 @@ export default function HelpSupportScreen() {
 
             </ScrollView>
 
-            {/* Back Button */}
-            <TouchableOpacity className="absolute bottom-6 left-6">
-                <Text className="text-blue-500 text-4xl">←</Text>
-            </TouchableOpacity>
 
         </View>
     );
