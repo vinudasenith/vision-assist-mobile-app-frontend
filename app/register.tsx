@@ -16,10 +16,6 @@ export default function LoginScreen() {
             {/* Form Card */}
             <View className="flex-1 bg-white rounded-t-3xl px-8 pt-12">
 
-                <Text className="text-blue-500 text-3xl font-bold text-center mb-12">
-                    Sign in!
-                </Text>
-
                 {/* Full Name Input */}
                 <View className="mb-6">
                     <Text className="text-black font-semibold mb-2">Full Name</Text>
