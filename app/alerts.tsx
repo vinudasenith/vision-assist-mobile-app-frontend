@@ -1,4 +1,4 @@
-import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import { ScrollView, Text, View } from 'react-native';
 
 export default function AlertsScreen() {
     return (
@@ -31,14 +31,6 @@ export default function AlertsScreen() {
                         #VAH-1023
                     </Text>
                 </View>
-
-                {/* Logout Button */}
-                <TouchableOpacity className="bg-blue-500 rounded-full py-4 mb-6 w-3/4 self-center">
-                    <Text className="text-white text-center font-bold text-lg">
-                        LOGOUT
-                    </Text>
-                </TouchableOpacity>
-
             </ScrollView>
         </View>
     );
